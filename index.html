@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>four4FortyFour - Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Space Grotesk';
+            src: url('fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .brand-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 3rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .brand-name {
+            font-family: 'Anton', sans-serif;
+            font-size: 6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            line-height: 1;
+            z-index: 2;
+            position: relative;
+            background: transparent;
+            padding-right: 2rem;
+        }
+
+        .model-image {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(20%,-50%);
+            width: 420px;
+            max-width: 45vw;
+            height: auto;
+            object-fit: contain;
+            z-index: 3;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .tagline {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .email-input {
+            padding: 1rem 2rem;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            min-width: 300px;
+        }
+
+        .notify-btn {
+            padding: 1rem 2rem;
+            background: #fff;
+            color: #000;
+            border: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .notify-btn:hover {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-link {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 900px) {
+            .brand-name {
+                font-size: 3rem;
+                padding-right: 1rem;
+            }
+            .model-image {
+                width: 200px;
+                max-width: 40vw;
+                transform: translate(10%,-50%);
+            }
+        }
+        @media (max-width: 600px) {
+            .brand-container {
+                min-height: 180px;
+            }
+            .brand-name {
+                font-size: 2rem;
+                padding-right: 0.5rem;
+            }
+            .model-image {
+                width: 120px;
+                max-width: 35vw;
+                transform: translate(5%,-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="material/videos/854102-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    
+    <div class="content">
+        <div class="brand-container">
+            <h1 class="brand-name">four4FortyFour</h1>
+            <img src="material/images/Adobe Express - file.png" alt="Model" class="model-image">
+        </div>
+        
+        <h2 class="tagline">Reinventing Streetwear</h2>
+        <p class="cta-text">Follow us on social media and stay tuned</p>
+        
+        <form class="email-form">
+            <input type="email" class="email-input" placeholder="Enter your email" required>
+            <button type="submit" class="notify-btn">Notify Me</button>
+        </form>
+        
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</body>
+</html>
